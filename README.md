@@ -27,7 +27,7 @@ Or open `index.html` directly in a browser.
 
 ## Customizing
 
-- **Business details** — phone, email, address, and hours are in the Contact and Footer sections of `index.html`. Search for `(555) 123-4567` and `hello@djonescatering.com` to replace with real info.
+- **Business details** — phone, email, address, and hours are in the Contact and Footer sections of `index.html`. Search for `(312) 852-8499` and `hello@djonescatering.com` to replace with real info.
 - **Photos** — the hero, About, and Gallery sections currently use CSS gradient placeholders (`.media-block`, `.gallery-item`, `.hero-bg`) instead of real photography. Drop real images into `images/` and swap the relevant CSS `background` declarations (or add `<img>` tags) once photos are available.
 - **Menu items** — edit the `.menu-panel` sections in `index.html` to reflect actual dishes and pricing.
 - **Social links** — update the `href="#"` placeholders in the `.social-links` block with real profile URLs.
