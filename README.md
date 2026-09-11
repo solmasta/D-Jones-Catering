@@ -1,6 +1,6 @@
-# D. Jones Catering
+# DJones Catering
 
-A responsive, single-page marketing website for D. Jones Catering — a full-service catering business for weddings, corporate events, and private parties.
+A responsive, single-page marketing website for DJones Catering LLC — customized catering (buffet style and four-course plated meals) for weddings, corporate events, and private parties.
 
 Built with plain HTML, CSS, and JavaScript (no build step, no dependencies).
 
@@ -11,7 +11,7 @@ Built with plain HTML, CSS, and JavaScript (no build step, no dependencies).
 ├── index.html        Page markup (Home, About, Services, Menu, Gallery, Testimonials, Contact)
 ├── css/style.css      All styling, responsive breakpoints, animations
 ├── js/script.js       Nav toggle, scroll effects, menu tabs, form validation
-└── images/            Favicon and any real photos you add later
+└── images/            Favicon and real event/food photography
 ```
 
 ## Running locally
@@ -27,8 +27,8 @@ Or open `index.html` directly in a browser.
 
 ## Customizing
 
-- **Business details** — phone, email, address, and hours are in the Contact and Footer sections of `index.html`. Search for `(312) 852-8499` and `hello@djonescatering.com` to replace with real info.
-- **Photos** — the hero, About, and Gallery sections currently use CSS gradient placeholders (`.media-block`, `.gallery-item`, `.hero-bg`) instead of real photography. Drop real images into `images/` and swap the relevant CSS `background` declarations (or add `<img>` tags) once photos are available.
+- **Business details** — phone `(312) 852-8499` and email `JonesD74@icloud.com` are live in the Contact and Footer sections of `index.html`. Address/service area is still a placeholder ("Greater Metro Area & Surrounding Counties") — update it once you have a specific service radius to publish.
+- **Photos** — the hero, About, and Gallery sections use real event photography (in `images/`). Add more by dropping new files into `images/` and adding `<img>` tags following the existing pattern in the Gallery section.
 - **Menu items** — edit the `.menu-panel` sections in `index.html` to reflect actual dishes and pricing.
 - **Social links** — update the `href="#"` placeholders in the `.social-links` block with real profile URLs.
 - **Contact form** — the form currently validates client-side and shows a success message, but is not wired to a backend. Connect it to a service like Formspree, Netlify Forms, or a custom API endpoint inside the `submit` handler in `js/script.js` (see the comment marking where to add the request).

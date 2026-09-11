@@ -1,5 +1,5 @@
 /* ==========================================================================
-   D. Jones Catering — Stylesheet
+   DJones Catering — Stylesheet
    ========================================================================== */
 
 :root {
@@ -244,8 +244,10 @@ section { position: relative; }
   inset: 0;
   background:
     radial-gradient(ellipse at 20% 20%, rgba(199,154,75,0.35), transparent 55%),
-    radial-gradient(ellipse at 80% 80%, rgba(166,56,71,0.4), transparent 55%),
-    linear-gradient(160deg, #3a0f16 0%, #5c1620 45%, #7a1f2b 100%);
+    linear-gradient(160deg, rgba(58,15,22,0.94) 0%, rgba(92,22,32,0.93) 45%, rgba(122,31,43,0.88) 100%),
+    url('../images/salmon-pasta-plate.jpg');
+  background-size: cover, cover, cover;
+  background-position: center, center, center 30%;
   z-index: -1;
 }
 .hero-bg::after {
@@ -331,10 +333,16 @@ section { position: relative; }
 .media-block {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.media-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .media-1 {
   height: 380px;
-  background: linear-gradient(150deg, #c79a4b, #7a1f2b);
 }
 .media-2 {
   position: absolute;
@@ -342,7 +350,6 @@ section { position: relative; }
   right: 0;
   width: 55%;
   height: 220px;
-  background: linear-gradient(150deg, #e7cd93, #a63847);
   border: 6px solid var(--color-bg);
 }
 .about-badge {
@@ -457,7 +464,7 @@ section { position: relative; }
 .gallery { padding: 120px 0; background: var(--color-bg-alt); }
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 220px;
   gap: 18px;
 }
@@ -469,6 +476,16 @@ section { position: relative; }
   align-items: flex-end;
   padding: 18px;
 }
+.gallery-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+.gallery-item:hover img { transform: scale(1.08); }
 .gallery-item span {
   color: #fff;
   font-family: var(--font-heading);
@@ -480,22 +497,9 @@ section { position: relative; }
 .gallery-item::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.55), transparent 60%);
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 60%);
   z-index: 0;
 }
-.gallery-item::after {
-  content: '';
-  position: absolute; inset: 0;
-  transition: transform 0.5s ease;
-  z-index: -1;
-}
-.gallery-item:hover::after { transform: scale(1.08); }
-.g1 { grid-column: span 2; background: linear-gradient(135deg, #7a1f2b, #c79a4b); }
-.g2 { background: linear-gradient(135deg, #5c1620, #a63847); }
-.g3 { background: linear-gradient(135deg, #c79a4b, #e7cd93); }
-.g4 { background: linear-gradient(135deg, #a63847, #7a1f2b); }
-.g5 { grid-column: span 2; background: linear-gradient(135deg, #e7cd93, #7a1f2b); }
-.g6 { background: linear-gradient(135deg, #5c1620, #c79a4b); }
 
 /* ---------- Testimonials ---------- */
 .testimonials { padding: 120px 0; background: var(--color-bg); }
@@ -690,7 +694,7 @@ section { position: relative; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonial-grid { grid-template-columns: 1fr; }
   .contact-inner { grid-template-columns: 1fr; }
-  .gallery-grid { grid-auto-rows: 180px; }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 180px; }
 }
 
 @media (max-width: 860px) {
@@ -708,7 +712,6 @@ section { position: relative; }
   .services-grid { grid-template-columns: 1fr; }
   .about-points { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .g1, .g5 { grid-column: span 2; }
   .hero-stats { gap: 30px; }
   .contact-form { padding: 28px; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
@@ -719,6 +722,5 @@ section { position: relative; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { width: 100%; }
   .gallery-grid { grid-template-columns: 1fr; }
-  .g1, .g5 { grid-column: span 1; }
   .footer-inner { grid-template-columns: 1fr; }
 }
